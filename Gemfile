@@ -69,5 +69,5 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 # ページング機能の実装
-gem 'kaminari','~> 1.1.1'
+gem 'kaminari','~> 1.2.1'
 # 入力後bundle installコマンドを実行して、kaminariをインストール
