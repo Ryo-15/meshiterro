@@ -1,0 +1,14 @@
+<%# ユーザプロフィール %>
+<div class="profile-container">
+    <h3 class="profile-name"><%= @user.name %></h3>
+    <%# attachment_image_tag 保存先インスタンス名, :保存先カラム名, :サイズ（横幅,高さ）, 画像拡張子, 代替画像 %>
+    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+    <%# 編集ページへのリンク %>
+    <% if @user.id == current_user.id %>
+        <p><%= link_to "プロフィール編集", edit_user_path(@user), class: "pull-right" %></p>
+    <% end %>
+</div>
+
+<%# _list.html.erbにある共通テンプレートを呼び出す %>
+<%# render [部分テンプレートファイルの指定（app/viewsより下のパス)], [ローカル変数]:[渡す値] %>
+<%= render 'post_images/list', post_images: @post_images %>
