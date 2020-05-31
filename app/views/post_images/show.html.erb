@@ -36,6 +36,7 @@
                 </li>
                 <% end %>
                 <li>
+                  <%# コメント件数を記述 %>
                   <i class="fa fa-comment"></i>
                   <a href="#comments"><%= @post_image.post_comments.count %></a>
                 </li>
@@ -53,6 +54,7 @@
           </div>
 
           <div class="comment-list bt style-2" id="comments">
+            <%# コメント件数を記述 %>
             <div class="float-wrapper">
               <h2 class="comment-count"><%= @post_image.post_comments.count %>件コメント</h2>
             </div>
